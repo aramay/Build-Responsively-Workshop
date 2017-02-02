@@ -29,9 +29,60 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .box10 { background:#16a085;}
 
 
-/* align-items - vertical centering 
-This defines the default behaviour for how flex items are laid out along the cross axis on the current line.
+
+/* align-self */
+
+.container{
+  display: flex;
+  border: 10px solid goldenrod;
+
+  height: 100vh;
+
+  align-items: flex-start
+}
+
+.box2 {
+  padding-bottom: 200px;
+}
+
+.box6 {
+  padding-bottom: 0;
+}
+
+.box9 {
+  padding-bottom: 50px;
+  /*align-self:stretch;*/
+}
+
+/* align-content
+.container{
+  display: flex;
+  border: 10px solid goldenrod;
+
+  flex-wrap: wrap;
+
+  height: 100vh;
+
+  /*it takes the extra space top to bottom*/
+  /*align-content: space-between; */
+  /*align-content: space-around; */
+  /*align-content: center; */
+  /*align-content: flex-start; */
+  /*align-content: flex-end; */
+}
 */
+
+/*assign width to get some wrapping
+.box{
+  width: 33.33%;
+}
+*/
+
+/* align-items - vertical centering 
+This defines the default behaviour for how flex items are laid out along the cross axis on the current line .
+
+AND IT NEED A HEIGHT TO WORK
+
 
 .container{
   display: flex;
@@ -43,6 +94,7 @@ This defines the default behaviour for how flex items are laid out along the cro
   min-height: 100vh;
 
 }
+*/
 
 /* We start writing out flexbox here. The above is just page setup 
 .container{
