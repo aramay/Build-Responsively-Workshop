@@ -22,9 +22,25 @@
 
   <style>
 
+    :root{
+      --base: yellow;
+      --spacing: 10px;
+      --blur: 10px
+    }
+
+    img{
+      background: var(--base);
+      padding: var(--spacing);
+      filter: blur(var(--blur));
+    }
+
+    .hl{
+      color: var(--base);
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
+
 
     body {
       text-align: center;
@@ -48,6 +64,41 @@
   </style>
 
   <script>
+
+    // this returns a Node List array not built-in arrays
+    const controls  = document.querySelectorAll(".controls input")
+
+    console.log(controls)
+
+    //listener to update values
+    function handleUpdate(){
+
+      // returns the input value
+      console.log(this.value)
+
+      // The HTMLElement.dataset property allows access, both in reading and writing mode, to all the custom data attributes (data-*) set on the element,
+      // console.log(this.dataset) 
+
+      const suffix = this.dataset.sizing || '';
+
+      // returns the Element that is the root element of the document (for example, the <html> element for HTML documents).
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+
+      // console.log(this.name);
+
+      // console.log(root.style.setProperty())
+
+
+    }
+
+    controls.forEach(control => 
+      control.addEventListener("change", handleUpdate)
+    )
+    //trigger for mouse move event
+    controls.forEach(control => 
+      control.addEventListener("mousemove", handleUpdate)
+    )
+
   </script>
 
 </body>
