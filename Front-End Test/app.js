@@ -29,20 +29,10 @@ function displayContent(){
 
     console.log(results)
 
-    
-
-    // var img = document.createElement("img")
-    // var title = document.createElement("h1")
-    // // var title = document.createElement("h1")
-    // var desc = document.createElement("p")
-
 
     for(var i=0; i<results.length; i++){
         
         var grid = document.querySelector(".grid")
-
-        // var feature = document.querySelector(".features")
-        // var template = document.querySelector(".plan")
 
         // container to hold individual items
         var div = document.createElement("div")
@@ -73,33 +63,10 @@ function displayContent(){
         div.append(ul)
         
         grid.append(div)
-        // grid.append(template)
-
-        // template.prepend(title)
-        // template.prepend(img)
-        // feature.append(desc)
-
-
-        // console.log(template)
-
-
-        // img.setAttribute("src", "./images/"+results[i].image_name)
-        // title.innerHTML = results[i].title
-        // desc.innerHTML = results[i].description
-
-        // var gridContainer = document.createElement("div")
-
-
-
-        // template.prepend(title)
-        // template.prepend(img)
-        // feature.append(desc)
+        
 
 
     }
-
-
-    // console.log(template)
 
 
 }
