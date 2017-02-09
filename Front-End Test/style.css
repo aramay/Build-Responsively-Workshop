@@ -10,7 +10,7 @@ html {
 body {
   font-family: sans-serif;
   margin: 0;
-  /*background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);*/
+  
 }
 
 a {
@@ -36,27 +36,19 @@ a {
   max-width: 90%;
   margin: 0 auto;
   display: flex;
-
-  /*flex-wrap: wrap;*/
-
-  /*flex-direction: column;*/
-  /*border: 10px solid goldenrod;*/
 }
 
 .grid{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /*flex-direction: column;*/
   width: 100%;
+
+  justify-content: space-around;
 }
 
 .banner{
-  /*justify-content: center;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  border: 2px solid red;
-  
-  height: 200px;
-  /*width: 900px;*/
+
   width: 100%;
 
   /*flex: 30;*/
@@ -65,26 +57,61 @@ a {
 .banner img{
   /*display: inline;*/
   /*height: auto;*/
-  min-height: 100%;
-  /*max-width: 100%;*/
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .plan{
+
+  width: 30%;
+
+  height: 400px;
+
+  overflow: hidden;
+
+  border: 1px solid #d1c7c7;
+  /*margin: 10px;*/
+  /*margin: 0 auto;*/
+  background: rgb(255, 255, 255, 0.2);
+
+  margin-top: 10px;
+
+}
+
+.plan img{
+  display: block;
+  max-width: 100%;
+}
+
+
+.plan > * {
   display: flex;
-  /*flex-direction: column;*/
+  flex-wrap: wrap;
+  /*border: 2px solid red;*/
+
+  /*justify-content: center;*/
+  justify-content: space-around;
+  /*flex-basis: 1 1 100%;*/
+}
+
+.plan h1{
+  font-size: 18px;
+
 }
 
 .flex-nav{
-  /*display: flex;*/
-  width: 30%;
+  display: flex;
+  /*width: 15%;*/
   margin: 10px;
   padding: 10px;
   
   margin-top: 0px;
   padding-top: 0px;
+
+
+  padding-right: 0px;
+  margin-right: 0px;
 }
-
-
 
 
 
@@ -94,4 +121,20 @@ a {
   margin: 0;
   padding: 0;
 
+  /*height: 100vh;*/
+  background-color: black;
+
+}
+
+.flex-nav a {
+  background-color: #525258;
+  
+  margin-bottom: 4px;
+
+}
+
+.plan ul{
+  padding: 10px;
+
+  text-align: center;
 }
