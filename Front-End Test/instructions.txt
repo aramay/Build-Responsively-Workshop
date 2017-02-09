@@ -1,0 +1,32 @@
+Implement the design(mockup.jpg) into a webpage using HTML, CSS and JavaScript. Please refrain from using any JavaScript/CSS libraries and frameworks. Your solution should meet the following requirements:
+
+1) The left sidebar with the navigation should be fixed, while the right content is vertically scrollable.
+
+2) Include the font icon library found at http://google.github.io/material-design-icons/. And use the following font icons:
+	<i class="material-icons">explore</i>
+	<i class="material-icons">folder</i>
+	<i class="material-icons">cloud_upload</i>
+	<i class="material-icons">favorite</i>
+	<i class="material-icons">grade</i>
+	<i class="material-icons">sort_by_alpha</i>
+
+3) Parse the JSON file(data.json) and display its contents in the DOM and do the following:
+	- when the page loads, make an Ajax request to get the contents from data.json
+	- only display items where "is_published” = true
+	- the first letter of each word for the title should be capitalized
+	- by default, items should display alphabetically in descending order by title
+
+4) Clicking the "AZ" font icon should toggle between sorting in ascending and descending order by title.
+
+5) The page should be as close to the mockup as possible.
+
+6) When finished, zip and upload your solution through the HackerRank website.
+
+Good luck!
+
+You should have the following files to complete the exercise:
+- instructions.txt
+- data.json
+- images (12)
+- mockup.jpg
+- mockup-with-callouts.jpg (w/styling callouts)
