@@ -4,24 +4,25 @@
   $.extend = function(target, object) {
 
     for(var prop in object){
-
-      console.log(prop)
-
       if(object.hasOwnProperty(prop)){
-        var value = object[prop]
-        console.log(value)
 
-        target[prop] = value 
+        target[prop] = object[prop]
         console.log(target)
       }
     }
+
+    return target;
   };
 
   // Static methods
   var isArrayLike = function(obj) {};
 
   $.extend($, {
-    isArray: function(obj) {},
+    isArray: function(obj) {
+      
+      return Object.prototype.toString.call(obj) === "[object Array]"
+
+    },
     each: function(collection, cb) {},
     makeArray: function(arr) {},
     proxy: function(fn, context) {}
