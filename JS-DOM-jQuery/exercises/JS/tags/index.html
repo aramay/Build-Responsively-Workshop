@@ -1,0 +1,45 @@
+<html>
+	<head></head>
+	<body>
+		<script type='text/javascript'>
+			// make functionality goes here
+			make = {};
+
+
+			tags = ["a","h1", "div", "span", "form","h2","h3"]
+
+			for (var i = 0; i < tags.length; i++) {
+				var tag = tags[i];
+
+				(function (tag){
+
+					console	.log(tag)
+
+					make[tag] = function(){
+						return document.createElement(tag);
+					}
+				})(tag)
+			}
+
+			console.log(make);
+
+		</script>
+
+		<script type='text/javascript'>
+
+			var h1 = make.h1();
+
+			console.log(h1);
+
+			h1.innerHTML = "Hello World"
+			document.body.appendChild(h1);
+
+			// var a = make.a()
+
+			// a.href= "http://canjs.com"
+			// a.innerHTML = "CanJS"
+
+			// document.body.appendChild(a);
+		</script>
+	</body>
+</html>
